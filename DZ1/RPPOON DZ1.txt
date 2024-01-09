@@ -25,7 +25,7 @@ public class Student : Person {
 	}
 	
 	public void ViewGrades() {
-		Console.WriteLine($"Grades for student {Ime} {Prezime}: {string.Join(", ", Grades)}");
+		Console.WriteLine($"Grades for student {Name} {Surname}: {string.Join(", ", Grades)}");
 	}
 	
 }
