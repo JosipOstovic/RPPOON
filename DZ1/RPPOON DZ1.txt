@@ -3,7 +3,7 @@ public class Person {
 	public string Surname { get; set; }
 	public int ID { get; set; }
 	
-	public Osoba(string name, string surname, int id) {
+	public Person(string name, string surname, int id) {
 		Name = name;
 		Surname = surname;
 		ID = id;
@@ -25,7 +25,7 @@ public class Student : Person {
 	}
 	
 	public void ViewGrades() {
-		Console.WriteLine($"Ocjene za studenta {Ime} {Prezime}: {string.Join(", ", Ocjene)}");
+		Console.WriteLine($"Grades for student {Ime} {Prezime}: {string.Join(", ", Grades)}");
 	}
 	
 }
@@ -53,10 +53,10 @@ public class Teacher : Person {
 } 
 
 public class Director : Person {
-	public List<Ucitelj> Teachers { get; set; }
+	public List<Teacher> Teachers { get; set; }
 	public List<Student> Students { get; set; }
 
-	public Ravnatelj(string name, string surname, int id) : base(name, surname, id) {
+	public Director(string name, string surname, int id) : base(name, surname, id) {
 		Teachers = new List<Teacher>();
 		Students = new List<Student>();
 	}
